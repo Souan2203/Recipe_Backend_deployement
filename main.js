@@ -9,7 +9,7 @@ const app =express()
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
- app.GET("/",(req,res)=>{
+ app.get("/", (req, res) => {
     res.send("Welcome REST API")
 })
  
