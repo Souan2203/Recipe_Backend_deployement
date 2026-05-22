@@ -3,16 +3,16 @@ const cors =require('cors')
 const env = require('dotenv').config();
 
 const host = process.env.HOST
-const port =process.env.port
+const port =process.env.PORT
 
 const app =express()
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-/* app.use("/",(req,res)=>{
+ app.GET("/",(req,res)=>{
     res.send("Welcome REST API")
 })
- */
+ 
 app.use('/uploads', express.static('Public/Uploads'))
 const fishrouter = require('./Router/fish.router')
 app.use("/api/fish",fishrouter)
