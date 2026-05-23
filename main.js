@@ -15,7 +15,7 @@ const port = process.env.PORT || 3005
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://recipe-gray-ten.vercel.app/"
+        "https://recipebackendrecipe.vercel.app/"
     ],
     credentials: true
 }))
