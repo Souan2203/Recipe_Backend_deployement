@@ -12,7 +12,13 @@ const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3005
 
 // CORS FIX
-app.use(cors())
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://recipe-gray-ten.vercel.app/"
+    ],
+    credentials: true
+}))
 
 // BODY PARSER
 app.use(express.json())
