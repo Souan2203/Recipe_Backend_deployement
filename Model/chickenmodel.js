@@ -16,10 +16,10 @@ const chickenSchema = mongoose.Schema({
         required:[true,"Description is required"]
     },
 
-    image:{
+    /* image:{
         type:String,
         required:true
-    },
+    }, */
 
     userId:{
         type:mongoose.Schema.ObjectId,

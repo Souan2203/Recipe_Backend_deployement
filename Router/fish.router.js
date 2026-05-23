@@ -87,7 +87,7 @@ foodRouter.post("/add",auth,uploadObj.single("fish") ,async (req, res) => {
             foodname: req.body.foodname,
             ingredients: req.body.ingredients,
             fooddesc: req.body.fooddesc,
-            image:req.file.filename,
+            /* image:req.file.filename, */
             userId:req.user.user_id
         })
         if (!foodobj) {

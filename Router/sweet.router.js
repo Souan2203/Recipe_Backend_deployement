@@ -23,7 +23,7 @@ sweetRouter.post("/add",auth,uploadObj.single("sweet"),async (req, res) => {
             foodname: req.body.foodname,
             ingredients: req.body.ingredients,
             fooddesc: req.body.fooddesc,
-            image:req.file.filename,
+            /* image:req.file.filename, */
             userId:req.user.user_id
         })
         if (!sweetObj) {

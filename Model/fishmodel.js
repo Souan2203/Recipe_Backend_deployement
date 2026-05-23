@@ -13,10 +13,10 @@ const fishSchema = mongoose.Schema({
         type:String,
         required:[true,"Food description is required"]
     },
-    image:{
+   /*  image:{
         type:String,
         required:true
-    },
+    }, */
     userId :{
         type:mongoose.Schema.ObjectId,
         ref:'userModel',
