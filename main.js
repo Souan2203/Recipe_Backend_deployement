@@ -45,10 +45,10 @@ app.use("/api/sweet", sweetRouter)
 const userRouter = require('./Router/user.router')
 app.use("/api/user", userRouter)
 
-app.listen(port,host, () => {
+/* app.listen(port,host, () => {
     console.log(`Server hasbeen started at http://${host}:${port}`)
 }) 
-
+ */
 module.exports=app
 
 
