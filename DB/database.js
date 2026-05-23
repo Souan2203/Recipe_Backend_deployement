@@ -1,17 +1,20 @@
-const mongoose = require ('mongoose')
-const env = require('dotenv').config();
-
-const dbUrl = `mongodb://${process.env.HOST}:${process.env.DB_PORT}/banglarkhaddo`
+const mongoose = require('mongoose')
+require('dotenv').config()
 
 async function CheckConnections() {
-    try{
-       await mongoose.connect(dbUrl);
-       console.log("Database successfully connected");
-       
-    }catch(error){
-        console.log(error);
-        
+
+    try {
+
+        await mongoose.connect(process.env.MONGO_URI)
+
+        console.log("Database successfully connected")
+
+    } catch (error) {
+
+        console.log(error)
+
     }
+
 }
-module.exports=CheckConnections();
-console.log("Database is globally Connected");
+
+module.exports = CheckConnections

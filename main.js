@@ -4,6 +4,9 @@ require('dotenv').config()
 
 const app = express()
 
+const CheckConnections = require('./DB/database')
+CheckConnections()
+
 // ENV
 const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3005
@@ -42,10 +45,11 @@ app.use("/api/sweet", sweetRouter)
 const userRouter = require('./Router/user.router')
 app.use("/api/user", userRouter)
 
+app.listen(port,host, () => {
+    console.log(`Server hasbeen started at http://${host}:${port}`)
+}) 
+
 module.exports=app
 
-// SERVER
-/* app.listen(port,host, () => {
-    console.log(`Server hasbeen started at http://${host}:${port}`)
-}) */
+
 
